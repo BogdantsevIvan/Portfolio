@@ -26,7 +26,8 @@ figcaption,
 blockquote,
 dl,
 dd {
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
@@ -139,7 +140,7 @@ body {
 }
 
 .nav {
-    margin: 20px auto 0% auto;
+    margin: 20px auto 0px auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -154,11 +155,17 @@ body {
     }
 }
 
+.first-prewiew__block.active {
+    transform: translate(0%, 0%);
+    opacity: 1;
+}
+
 .first-prewiew {
-    margin-top: 93px;
+    // margin-top: 93px;
     // height: 724px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
     &__img {
         max-width: 649px;
@@ -167,6 +174,10 @@ body {
     &__block {
         margin-top: 100px;
         width: 522px;
+
+        transform: translate(0%, 100%);
+        opacity: 0;
+        transition: all 0.3s ease 0s;
     }
 
     &__text {
@@ -224,8 +235,17 @@ body {
     width: 310px;
 }
 
+.about-me.active {
+    transform: translate(0%, 0%);
+    opacity: 1;
+}
+
 .about-me {
     padding: 60px 0px 120px 0px;
+
+    transform: translate(0%, 100%);
+    opacity: 0;
+    transition: all 0.3s ease 0s;
 
     &__header {
         margin-bottom: 20px;
@@ -242,6 +262,11 @@ body {
     }
 }
 
+.portfolio__block.active {
+    transform: translate(0%, 0%);
+    opacity: 1;
+}
+
 .portfolio {
     &__conteiner {
         margin-bottom: 60px;
@@ -253,6 +278,9 @@ body {
     &__block {
         margin: 0% auto 0% auto;
         text-align: center;
+        transform: translate(-300%, 0%);
+        opacity: 0;
+        transition: all 0.6s ease 0.3s;
     }
 
     &__img {
@@ -354,6 +382,6 @@ body {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        max-width: 385px;
+        width: 385px;
     }
 }
